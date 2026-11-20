@@ -17,3 +17,4 @@ jobs:
         with:
           name: stackinf-jar
           path: build/libs/*.jar
+          
