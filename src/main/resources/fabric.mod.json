@@ -3,10 +3,11 @@
   "id": "stackinf",
   "version": "${version}",
   "name": "StackInf",
-  "description": "Stack infinito com botao secreto de duplicar.",
+  "description": "Stack infinito",
   "environment": "*",
   "entrypoints": {
-    "main": ["com.stackinf.StackInf"]
+    "main": ["com.stackinf.StackInf"],
+    "client": ["com.stackinf.StackInfClient"]
   },
   "mixins": ["stackinf.mixins.json"],
   "depends": {
