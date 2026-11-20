@@ -2,6 +2,6 @@
   "required": true,
   "package": "com.stackinf.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": ["ItemStackMixin"],
+  "mixins": ["ItemStackMixin", "ContainerMixin", "ExtraCodecsMixin"],
   "injectors": { "defaultRequire": 1 }
 }
