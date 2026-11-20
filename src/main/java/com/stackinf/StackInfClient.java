@@ -6,17 +6,13 @@ import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.minecraft.client.KeyMapping;
-import net.minecraft.resources.Identifier;
 
 public class StackInfClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        KeyMapping.Category category = KeyMapping.Category.register(
-            Identifier.fromNamespaceAndPath("stackinf", "main"));
-
         KeyMapping doubleKey = KeyBindingHelper.registerKeyBinding(
             new KeyMapping("key.stackinf.double",
-                InputConstants.Type.KEYSYM, InputConstants.KEY_K, category));
+                InputConstants.Type.KEYSYM, InputConstants.KEY_K, "key.categories.stackinf"));
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (doubleKey.consumeClick()) {
